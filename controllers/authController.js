@@ -20,4 +20,6 @@ export const registerController = async (req,res) => {
 
     //Creating a new user
     const hashedPassword = await hashPassword(password);
+    //save
+    const user = await new userModel({
 };
