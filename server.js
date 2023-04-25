@@ -10,6 +10,9 @@ dotenv.config();
 //connect to database
 connectDB();
 
+//middleware
+app.use(express.json());
+
 app.get('/', (req, res) => {
     res.send(`<h1> This is the first Test Express App running on ${PORT} </h1>`) 
 });
