@@ -13,6 +13,7 @@ connectDB();
 
 //middleware
 app.use(express.json());
+app.use(morgan('dev'));
 
 app.get('/', (req, res) => {
     res.send(`<h1> This is the first Test Express App running on ${PORT} </h1>`) 
