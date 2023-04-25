@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { Express } from "express";
 import { registerController } from "../controllers/authController.js";
 
 const router = express.Router();
