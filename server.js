@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('<h1> This is the first Test Express App </h1>') 
+    res.send(`<h1> This is the first Test Express App running on ${PORT} </h1>`) 
 });
 const PORT =process.env.PORT || 8080;
 
