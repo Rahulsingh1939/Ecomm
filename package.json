@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Rahulsingh1939/Ecomm/issues"
   },
-  "homepage": "https://github.com/Rahulsingh1939/Ecomm#readme"
+  "homepage": "https://github.com/Rahulsingh1939/Ecomm#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
