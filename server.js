@@ -1,7 +1,9 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const connectDB = require('./config/db');
-const morgan = require('morgan');
+// const express = require('express');
+// const dotenv = require('dotenv');
+// const connectDB = require('./config/db');
+// const morgan = require('morgan');
+import express from 'express';
+
 
 const app = express();
 
