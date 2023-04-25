@@ -4,6 +4,12 @@ const connectDB = require('./config/db');
 
 const app = express();
 
+//configure env
+dotenv.config();
+
+//connect to database
+connectDB();
+
 app.get('/', (req, res) => {
     res.send(`<h1> This is the first Test Express App running on ${PORT} </h1>`) 
 });
