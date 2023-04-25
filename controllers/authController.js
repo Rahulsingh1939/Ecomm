@@ -1,4 +1,5 @@
 import userModel from '../models/userModel.js';
+import {hashPassword} from '../helpers/authHelper.js'
 
 export const registerController = async (req,res) => {
     const {name , email, password, phone,address} = req.body;
@@ -16,4 +17,7 @@ export const registerController = async (req,res) => {
             message: "User already exists"
         });
     }
+
+    //Creating a new user
+    const hashedPassword = await hashPassword(password);
 };
