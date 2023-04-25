@@ -6,5 +6,7 @@ export const hashPassword = (password) => {
         const hashedPassword = bcrypt.hashSync(password,saltrounds);
         return hashedPassword;
     },
-    catch()
+    catch(error){
+        console.log(error);
+    }
 }
