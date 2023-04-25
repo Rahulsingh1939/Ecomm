@@ -9,3 +9,5 @@ export const hashPassword = (password) => {
         console.log(error);
     }
 }
+
+export const comparePassword = (password, hashedPassword) => {
