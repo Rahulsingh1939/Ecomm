@@ -6,6 +6,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import morgan from 'morgan';
+import authRoute from './routes/authRoute.js';
 
 const app = express();
 
@@ -19,6 +20,10 @@ connectDB();
 app.use(express.json());
 app.use(morgan('dev'));
 
+//routes
+app.use('/api/auth', authRoute);
+
+//API 
 app.get('/', (req, res) => {
     res.send(`<h1> This is the first Test Express App running on ${PORT} </h1>`) 
 });
