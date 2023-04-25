@@ -3,7 +3,7 @@
 // const connectDB = require('./config/db');
 // const morgan = require('morgan');
 import express from 'express';
-
+import dotenv from 'dotenv';
 
 const app = express();
 
