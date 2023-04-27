@@ -1,10 +1,12 @@
 import userModel from "../models/userModel.js";
+import mongoose from "mongoose";
+import express from "express";
 import { comparePassword, hashPassword } from "./../helpers/authHelper.js";
 import JWT from "jsonwebtoken";
 
 export const registerController = async (req, res) => {
   try {
-    const { name, email, password, phone, address } = req.body;
+    const  { name, email, password, phone, address } = await req.body;
     //validations
     if (!name) {
       return res.send({ error: "Name is Required" });
@@ -50,7 +52,7 @@ export const registerController = async (req, res) => {
     console.log(error);
     res.status(500).send({
       success: false,
-      message: "Errro in Registeration",
+      message: "Error in Registeration",
       error,
     });
   }
